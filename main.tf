@@ -1,17 +1,18 @@
 provider "google" {
   credentials = "${file(var.key_path)}"
+  region = "<region>"
   project = "<project id>"
 }
 
 resource "google_cloud_run_service" "default" {
-  name     = "hello-nginx"
-  location = "asia-southeast1"
+  name     = "blog"
+  location = "<region>"
   template {
     spec {
       containers {
-        image = "gcr.io/<project id>/nginx"
+        image = "gcr.io/<project id>/blog"
         ports{
-          container_port = 80
+          container_port = 1323
         }
       }
     }

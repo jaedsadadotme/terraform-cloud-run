@@ -3,3 +3,4 @@
 jaedsada.json
 terraform.*
 deploy.sh
+example.main.tf
