@@ -1,6 +1,6 @@
 provider "google" {
   credentials = "${file(var.key_path)}"
-  project = "endless-matter-306713"
+  project = "<project id>"
 }
 
 resource "google_cloud_run_service" "default" {
@@ -9,7 +9,7 @@ resource "google_cloud_run_service" "default" {
   template {
     spec {
       containers {
-        image = "gcr.io/endless-matter-306713/nginx"
+        image = "gcr.io/<project id>/nginx"
         ports{
           container_port = 80
         }
