@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = "${file("jaedsada.json")}"
+  credentials = "${file(var.key_path)}"
   project = "endless-matter-306713"
 }
 

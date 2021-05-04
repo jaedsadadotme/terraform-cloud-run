@@ -11,15 +11,15 @@ $ terraform init
 
 ### Plan the code
 ```sh
-$ terraform plan
+$ terraform plan -var key_path=<key.json>
 ```
 
 ### Apply
 ```sh
-$ terraform apply --auto-approve
+$ terraform apply -var key_path=<key.json> --auto-approve
 ```
 
 ### Delete (Optional)
 ```sh
-$ terraform destroy --auto-approve
+$ terraform destroy --auto-approve 
 ```
